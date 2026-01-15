@@ -45,9 +45,9 @@ session_start();
 <?php
 
 $query = "SELECT d.nume AS materie, p.email AS email_profesor, n.valoare AS nota
-FROM NOTA n
-JOIN DISCIPLINA d ON d.id_disciplina = n.id_disciplina
-JOIN PROFESOR p   ON p.id_profesor   = n.id_profesor
+FROM nota n
+JOIN disciplina d ON d.id_disciplina = n.id_disciplina
+JOIN profesor p   ON p.id_profesor   = n.id_profesor
 WHERE n.id_elev = $id_elev
 ORDER BY d.nume, n.data DESC
 ";
